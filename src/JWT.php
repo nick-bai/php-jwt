@@ -164,7 +164,8 @@ class JWT
 
         // Check if this token has expired.
         if (isset($payload->exp) && ($timestamp - static::$leeway) >= $payload->exp) {
-            throw new ExpiredException('Expired token');
+            // throw new ExpiredException('Expired token');
+            return (object)['data' => ['code' => 204, 'msg' => 'Expired token', 'data' => $payload]];
         }
 
         return $payload;
