@@ -1,6 +1,6 @@
 <?php
 
-namespace Firebase\JWT;
+namespace NickBai\JWT;
 
 use ArrayAccess;
 use DateTime;
